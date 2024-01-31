@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="如何对一本书进行简单随机抽样阅读？ # 1 # 为什么我们往往觉得买书容易看书难？一个容易忽视的细节就是书的厚度影响了我们的阅读决策，现在的书动不动都是10万字起步，当我想阅读一本书时，首先引入眼帘的是它的厚度，如果再叠加内容本身的阅读难度，大脑就会觉得书难读进而迟迟不愿再翻开它，或者像我一样，翻开的频率随着时间的推移而逐步减少直至降为零。
+如何破解这个难题？经济学家维尔弗雷多 · 帕累托（Vilfredo Pareto）给我们带来了灵感，他指出，在大多数情况下，80% 的结果往往由 20% 的原因引发 （所以也被称为80/20 规则）。80/20 规则在生活中比比皆是：对于许多企业来说， 80% 的收入来自 20% 的客户、80% 的业绩来自 20% 的员工；对于个人来说，80% 的深厚友谊关系往往来自 20% 的朋友、80%的成果往往来自20%的努力。所以，80/20 原则提醒我们，关键是要找出这20%的至关重要的少数并专注于此，就能产生更好的成就。
+将80/20原则运用到阅读层面不难发现，一本书的20%往往代表了80%的内容权重。这就意味着，对于任意一本书，无论它有多厚，我们只要找到其中1/5的精华去读，就能大大降低大脑对阅读的畏难感。
+（pic）
+那么，当我们拿到一本书后，如何确认那20%的权重呢？
+最简单的办法就是抽取一本书20%的章节，这称之为「简单随机抽样」：对于一本书不进行内容的解析判断，直接随机取样。
+在具体计算过程中，还要考虑书中每页的文字密度，使用过Word的同学都知道，决定一页文字多少取决于两个要素，行距和字号：行距越小、字号越小，每页能够显示的内容就越多，反之亦然。
+由于大多数书本的字号都在小四~五号字体之间，所以我们在随机抽样时将字号和行距形成的文字密度统一设定为1.1~1.6之间，那么一本书的核心章节就可以按如下公式进行计算：
+核心阅读章节 = 书本章节总数 × 20% × 系数（1.1~1.6）
+这里我们暂且将系数设为中位数1.3，所以就是：
+核心阅读章节 = 书本章节总数 × 20% × 1.3
+2 # 这里我们以《行为科学统计》这本书为示范进行简单随机抽样。
+1. 核心章节计算 # 打开《行为科学统计》的目录页，我们发现这本书一共有19章：
+我们将前面的公式代入：
+《行为科学统计》核心章节 = 书本章节总数(19) × 20% × 中位系数（1.3）
+= 19 × 20% × 1.3
+= 4.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="01.简单随机抽样" />
+<meta property="og:description" content="如何对一本书进行简单随机抽样阅读？ # 1 # 为什么我们往往觉得买书容易看书难？一个容易忽视的细节就是书的厚度影响了我们的阅读决策，现在的书动不动都是10万字起步，当我想阅读一本书时，首先引入眼帘的是它的厚度，如果再叠加内容本身的阅读难度，大脑就会觉得书难读进而迟迟不愿再翻开它，或者像我一样，翻开的频率随着时间的推移而逐步减少直至降为零。
+如何破解这个难题？经济学家维尔弗雷多 · 帕累托（Vilfredo Pareto）给我们带来了灵感，他指出，在大多数情况下，80% 的结果往往由 20% 的原因引发 （所以也被称为80/20 规则）。80/20 规则在生活中比比皆是：对于许多企业来说， 80% 的收入来自 20% 的客户、80% 的业绩来自 20% 的员工；对于个人来说，80% 的深厚友谊关系往往来自 20% 的朋友、80%的成果往往来自20%的努力。所以，80/20 原则提醒我们，关键是要找出这20%的至关重要的少数并专注于此，就能产生更好的成就。
+将80/20原则运用到阅读层面不难发现，一本书的20%往往代表了80%的内容权重。这就意味着，对于任意一本书，无论它有多厚，我们只要找到其中1/5的精华去读，就能大大降低大脑对阅读的畏难感。
+（pic）
+那么，当我们拿到一本书后，如何确认那20%的权重呢？
+最简单的办法就是抽取一本书20%的章节，这称之为「简单随机抽样」：对于一本书不进行内容的解析判断，直接随机取样。
+在具体计算过程中，还要考虑书中每页的文字密度，使用过Word的同学都知道，决定一页文字多少取决于两个要素，行距和字号：行距越小、字号越小，每页能够显示的内容就越多，反之亦然。
+由于大多数书本的字号都在小四~五号字体之间，所以我们在随机抽样时将字号和行距形成的文字密度统一设定为1.1~1.6之间，那么一本书的核心章节就可以按如下公式进行计算：
+核心阅读章节 = 书本章节总数 × 20% × 系数（1.1~1.6）
+这里我们暂且将系数设为中位数1.3，所以就是：
+核心阅读章节 = 书本章节总数 × 20% × 1.3
+2 # 这里我们以《行为科学统计》这本书为示范进行简单随机抽样。
+1. 核心章节计算 # 打开《行为科学统计》的目录页，我们发现这本书一共有19章：
+我们将前面的公式代入：
+《行为科学统计》核心章节 = 书本章节总数(19) × 20% × 中位系数（1.3）
+= 19 × 20% × 1.3
+= 4." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://Smartreader.top/docs/example/Ch5.%E6%8A%BD%E6%A0%B7%E9%98%85%E8%AF%BB/how-to-sample-reading-a-book/" /><meta property="article:section" content="docs" />
+
+
+
+<title>01.简单随机抽样 | Hugo Book</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" >
+<link rel="stylesheet" href="/book.min.33a48f5432973b8ff9a82679d9e45d67f2c15d4399bd2829269455cfe390b5e8.css" integrity="sha256-M6SPVDKXO4/5qCZ52eRdZ/LBXUOZvSgpJpRVz&#43;OQteg=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.f2679c4a5c5713d016c3c2134a44412060988c13b44eb591106286aa1dc0db7f.js" integrity="sha256-8mecSlxXE9AWw8ITSkRBIGCYjBO0TrWREGKGqh3A238=" crossorigin="anonymous"></script>
+
+  <script defer src="/sw.min.88f1afdaf4798d7d3520420dcfe201f928c3d371fdedfc3ae28cd9b6b79544f8.js" integrity="sha256-iPGv2vR5jX01IEINz&#43;IB&#43;SjD03H97fw64ozZtreVRPg=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Hugo Book</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <a href="/docs/example/" class="">Example Site</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/table-of-contents/" class="">Table of Contents</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/table-of-contents/with-toc/" class="">With ToC</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/table-of-contents/without-toc/" class="">Without ToC</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-53120ceca2b854ca4fa7750165495342" class="toggle" checked />
+    <label for="section-53120ceca2b854ca4fa7750165495342" class="flex justify-between">
+      <a role="button" class="">Ch5.抽样阅读</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/Ch5.%E6%8A%BD%E6%A0%B7%E9%98%85%E8%AF%BB/how-to-sample-reading-a-book/" class="active">01.简单随机抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/Ch5.%E6%8A%BD%E6%A0%B7%E9%98%85%E8%AF%BB/How-to-read-a-book-at-equal-intervals/" class="">02.等距抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/Ch5.%E6%8A%BD%E6%A0%B7%E9%98%85%E8%AF%BB/%E6%95%B4%E7%BE%A4%E6%8A%BD%E6%A0%B7/" class="">03.整群抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/Ch5.%E6%8A%BD%E6%A0%B7%E9%98%85%E8%AF%BB/%E5%88%86%E5%B1%82%E6%8A%BD%E6%A0%B7/" class="">04.分层抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/Ch5.%E6%8A%BD%E6%A0%B7%E9%98%85%E8%AF%BB/%E4%BE%BF%E5%88%A9%E6%8A%BD%E6%A0%B7/" class="">05.便利抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/Ch5.%E6%8A%BD%E6%A0%B7%E9%98%85%E8%AF%BB/%E4%B8%93%E5%AE%B6%E6%8A%BD%E6%A0%B7/" class="">06.专家抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/Ch5.%E6%8A%BD%E6%A0%B7%E9%98%85%E8%AF%BB/%E9%9B%AA%E7%90%83%E6%8A%BD%E6%A0%B7/" class="">07.雪球抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/Ch5.%E6%8A%BD%E6%A0%B7%E9%98%85%E8%AF%BB/%E9%85%8D%E9%A2%9D%E6%8A%BD%E6%A0%B7/" class="">08.配额抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/Ch5.%E6%8A%BD%E6%A0%B7%E9%98%85%E8%AF%BB/%E7%BB%BC%E5%90%88%E7%90%86%E8%A7%A3/" class="">09.综合理解</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-bd95c6cba928c3cd340e59af7157781b" class="toggle"  />
+    <label for="section-bd95c6cba928c3cd340e59af7157781b" class="flex justify-between">
+      <a role="button" class="">Ch8.卡片阅读</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/Ch8.%E5%8D%A1%E7%89%87%E9%98%85%E8%AF%BB/%E4%BB%80%E4%B9%88%E6%98%AF%E5%8D%A1%E7%89%87/" class="">01.什么是卡片</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/Ch8.%E5%8D%A1%E7%89%87%E9%98%85%E8%AF%BB/%E5%8D%A1%E7%89%87%E7%9A%84%E7%BB%93%E6%9E%84/" class="">02.卡片的基本格式</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/Ch8.%E5%8D%A1%E7%89%87%E9%98%85%E8%AF%BB/%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3%E4%B8%80%E5%8D%A1%E4%B8%80%E4%BA%8B/" class="">03.如何理解一卡一事</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/Ch8.%E5%8D%A1%E7%89%87%E9%98%85%E8%AF%BB/%E5%A6%82%E4%BD%95%E6%92%B0%E5%86%99%E5%9F%BA%E7%A1%80%E5%8D%A1/" class="">04.如何撰写基础卡</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/Ch8.%E5%8D%A1%E7%89%87%E9%98%85%E8%AF%BB/%E5%A6%82%E4%BD%95%E6%92%B0%E5%86%99%E8%A1%8C%E5%8A%A8%E5%8D%A1/" class="">05.如何撰写行动卡</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/Ch8.%E5%8D%A1%E7%89%87%E9%98%85%E8%AF%BB/%E5%A6%82%E4%BD%95%E6%92%B0%E5%86%99%E6%96%B0%E7%9F%A5%E5%8D%A1/" class="">如何撰写新知卡</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Shortcodes</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/shortcodes/buttons/" class="">Buttons</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/shortcodes/columns/" class="">Columns</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/shortcodes/details/" class="">Details</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/shortcodes/expand/" class="">Expand</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/shortcodes/hints/" class="">Hints</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/shortcodes/mermaid/" class="">Mermaid</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-d3fc1bf6d66cd84b896a0af9f40cb1d5" class="toggle"  />
+    <label for="section-d3fc1bf6d66cd84b896a0af9f40cb1d5" class="flex justify-between">
+      <a href="/docs/shortcodes/section/" class="">Section</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/shortcodes/section/first-page/" class="">First Page</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/shortcodes/section/second-page/" class="">Second Page</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/shortcodes/tabs/" class="">Tabs</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/shortcodes/katex/" class="">KaTeX</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/posts/"  >
+        Blog
+      </a>
+  </li>
+  
+  <li>
+    <a href="https://github.com/alex-shpak/hugo-book"  target="_blank" rel="noopener">
+        Github
+      </a>
+  </li>
+  
+  <li>
+    <a href="https://themes.gohugo.io/hugo-book/"  target="_blank" rel="noopener">
+        Hugo Themes
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>01.简单随机抽样</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#如何对一本书进行简单随机抽样阅读">如何对一本书进行简单随机抽样阅读？</a>
+      <ul>
+        <li><a href="#1">1</a></li>
+        <li><a href="#2">2</a>
+          <ul>
+            <li></li>
+          </ul>
+        </li>
+        <li><a href="#3">3</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="如何对一本书进行简单随机抽样阅读">
+  如何对一本书进行简单随机抽样阅读？
+  <a class="anchor" href="#%e5%a6%82%e4%bd%95%e5%af%b9%e4%b8%80%e6%9c%ac%e4%b9%a6%e8%bf%9b%e8%a1%8c%e7%ae%80%e5%8d%95%e9%9a%8f%e6%9c%ba%e6%8a%bd%e6%a0%b7%e9%98%85%e8%af%bb">#</a>
+</h1>
+<h2 id="1">
+  1
+  <a class="anchor" href="#1">#</a>
+</h2>
+<p>为什么我们往往觉得买书容易看书难？一个容易忽视的细节就是书的厚度影响了我们的阅读决策，现在的书动不动都是10万字起步，当我想阅读一本书时，首先引入眼帘的是它的厚度，如果再叠加内容本身的阅读难度，大脑就会觉得书难读进而迟迟不愿再翻开它，或者像我一样，翻开的频率随着时间的推移而逐步减少直至降为零。</p>
+<p>如何破解这个难题？经济学家维尔弗雷多 · 帕累托（Vilfredo Pareto）给我们带来了灵感，他指出，在大多数情况下，80% 的结果往往由 20% 的原因引发 （所以也被称为80/20 规则）。80/20 规则在生活中比比皆是：对于许多企业来说， 80% 的收入来自 20% 的客户、80% 的业绩来自 20% 的员工；对于个人来说，80% 的深厚友谊关系往往来自 20% 的朋友、80%的成果往往来自20%的努力。所以，80/20 原则提醒我们，关键是要找出这20%的至关重要的少数并专注于此，就能产生更好的成就。</p>
+<img src="https://pbox.online/202312141226494.png" alt="image-20231214122610425" style="zoom:50%;" />
+<p>将80/20原则运用到阅读层面不难发现，一本书的20%往往代表了80%的内容权重。这就意味着，对于任意一本书，无论它有多厚，我们只要找到其中1/5的精华去读，就能大大降低大脑对阅读的畏难感。</p>
+<p>（pic）</p>
+<p>那么，当我们拿到一本书后，如何确认那20%的权重呢？</p>
+<p>最简单的办法就是抽取一本书20%的章节，这称之为「简单随机抽样」：对于一本书不进行内容的解析判断，直接随机取样。</p>
+<p>在具体计算过程中，还要考虑书中每页的文字密度，使用过Word的同学都知道，决定一页文字多少取决于两个要素，行距和字号：行距越小、字号越小，每页能够显示的内容就越多，反之亦然。</p>
+<p>由于大多数书本的字号都在小四~五号字体之间，所以我们在随机抽样时将字号和行距形成的文字密度统一设定为1.1~1.6之间，那么一本书的核心章节就可以按如下公式进行计算：</p>
+<blockquote>
+<p>核心阅读章节 = 书本章节总数 × 20% × 系数（1.1~1.6）</p>
+</blockquote>
+<p>这里我们暂且将系数设为中位数1.3，所以就是：</p>
+<blockquote>
+<p>核心阅读章节 = 书本章节总数 × 20% × 1.3</p>
+</blockquote>
+<h2 id="2">
+  2
+  <a class="anchor" href="#2">#</a>
+</h2>
+<p>这里我们以《行为科学统计》这本书为示范进行简单随机抽样。</p>
+<h4 id="1-核心章节计算">
+  1. 核心章节计算
+  <a class="anchor" href="#1-%e6%a0%b8%e5%bf%83%e7%ab%a0%e8%8a%82%e8%ae%a1%e7%ae%97">#</a>
+</h4>
+<p>打开《行为科学统计》的目录页，我们发现这本书一共有19章：</p>
+<p>
+  <img src="https://pbox.online/202305270813613.png" alt="image-20230527081312488" /></p>
+<p>我们将前面的公式代入：</p>
+<blockquote>
+<p>《行为科学统计》核心章节 = 书本章节总数(19) × 20% × 中位系数（1.3）</p>
+<p>= 19 × 20% × 1.3</p>
+<p>= 4.94</p>
+<p>≈ 5</p>
+</blockquote>
+<p>所以我们现在知道，如果我们要对《行为科学统计》全书的知识进行相对完整的理解，最低需要随机抽样 5 章。</p>
+<h4 id="2-随机抽样代入">
+  2. 随机抽样代入
+  <a class="anchor" href="#2-%e9%9a%8f%e6%9c%ba%e6%8a%bd%e6%a0%b7%e4%bb%a3%e5%85%a5">#</a>
+</h4>
+<p>我们打开统计网站 <strong>
+  <a href="https://www.trialstats.com/">临床试验统计网</a></strong> ，在首页点击标题栏 <code>STATBOX</code>：</p>
+<p>
+  <img src="https://pbox.online/202312111015299.png" alt="image-20231211101516176" /></p>
+<p>在 新窗口标题栏继续点击 <code>随机化</code>-<code>抽样</code>-<code>简单随机抽样</code></p>
+<p>
+  <img src="https://pbox.online/202312111016217.png" alt="image-20231211101627118" /></p>
+<p>新弹出「在线简单随机抽样」页面，我们把最小编号、最大编号（《行为科学统计》的章节总数）、抽样个数（简单随机抽样的章节数量）填写（注意最后一步「随机种子」清空原始值留空），然后点击右上角的红色计算按钮。</p>
+<p>
+  <img src="https://pbox.online/202312111019855.png" alt="image-20231211101935781" /></p>
+<p>这样就弹出了随机抽样的章节：</p>
+<p>
+  <img src="https://pbox.online/202312111021172.png" alt="image-20231211102122105" /></p>
+<p>这时候，我们就翻开《行为科学统计》，着重阅读第2章、第7章、第10章、第15章以及第17章。不过这里需要留意，因为抽样结果具有随机性，所以如果我们在网站上进行第二次类似操作时，可能会出现不同的抽样章节。</p>
+<p>到这里我们发现，对于书本的简单随机抽样，我们只需要做到两步即可：</p>
+<ol>
+<li>根据全书的章节总数按照80/20原则进行随机抽样的章节数量计算。</li>
+<li>将相关数据填入 
+  <a href="https://www.trialstats.com/">临床试验统计网</a> ，得出首先阅读的章节。</li>
+</ol>
+<h2 id="3">
+  3
+  <a class="anchor" href="#3">#</a>
+</h2>
+<p>到这里有的同学可能会问，这里的简单随机抽样结果具有极大的随机性，如果抽样出来的章节并非核心章节，这里的抽样还有什么意义？</p>
+<p>其实，如果我们拿到一本自己比较陌生的书，我们暂时没有有效的方法确认这本书的核心章节时，这时候通过简单随机抽样可以让自己尽快激活自己阅读行为，不至于一直认为一本书太厚、太难读而陷入阅读瘫痪的窘境。而一旦激活了阅读行为，后面介绍的相关抽样方法又能进一步调整自己先前随机抽样的判断，形成对全书更深刻的认知与理解。所以，简单随机抽样阅读看似简单，其实它是整个抽样阅读的基础。</p>
+<p>Ref：</p>
+<p>《聪明的阅读者》</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/main/exampleSite/content/docs/example/Ch5.%e6%8a%bd%e6%a0%b7%e9%98%85%e8%af%bb/%e7%ae%80%e5%8d%95%e9%9a%8f%e6%9c%ba%e6%8a%bd%e6%a0%b7.md" target="_blank" rel="noopener">
+      <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#如何对一本书进行简单随机抽样阅读">如何对一本书进行简单随机抽样阅读？</a>
+      <ul>
+        <li><a href="#1">1</a></li>
+        <li><a href="#2">2</a>
+          <ul>
+            <li></li>
+          </ul>
+        </li>
+        <li><a href="#3">3</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

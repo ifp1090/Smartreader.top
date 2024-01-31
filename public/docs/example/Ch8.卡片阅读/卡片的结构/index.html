@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="在输出卡片的过程中，一共有9种卡片可以输出，在具体展开输出之前，我们可以提炼一下卡片输出的基本结构：
+卡片结构 卡片内容 头 卡片标题 身 卡片内容 尾 卡片参考 &#43; 卡片编码 示范卡&hellip;..
+卡片的“头”（标题）
+在卡片头部可能包含要素：
+卡片标题（必选） 卡片数量（可选） 卡片标题就是对需要撰写卡片的一个概括关键词，它可以在撰写卡片之前写，也可以在卡片写完之后写。
+这里的卡片数量并不是是指截止你写这张卡片时一共输出的卡片总数（当然如果你愿意，也可以写），而是比如我们要写卡片时，发现一张卡片并不能写完我们想输出的内容，那么这时候我们可以将卡片分拆为2~3张，那么第一张卡片可以标记为1/2，第二张卡片可以标记为2/2。这时候我们看到这个标记，就知道这张卡片一共有两张，我目前看到的是第一张或者第二张。
+如果是电子版，可以在卡片标题下面写上卡片数量；如果是实体版，可以写在卡片标题的最右边方便识别。
+&hellip;&hellip;
+标题的撰写方法：
+电子版：可以用Markdown语法的#来表示； 手写版：可以借用Markdown语法，同样用#来表示，这样更便捷。 &hellip;&hellip;
+卡片的“身”（内容）
+卡片的“尾”（末段）
+所有卡片在最末端都统一写上两个要素：
+这张卡片内容的原始参考 书写这张卡片的精确时间点 卡片的原始参考有两类，第一类是我们所书写的卡片内容的来源，这类最为常见，比如我们正在阅读《聪明的阅读者》的卡片大法这一章，我们看到「基础卡」这个概念，那么我们可以写一张基础卡的术语卡：
+#术语卡 什么是基础卡？
+基础卡是阳志平老师推荐的卡片大法中的一种，它是指我们在读书时所产生的一些最基本、最普通想法时输出的卡片类型。基础卡的基本模块包括标题、内容、参考、编码四种，相比较另外8种卡片，基础卡使用最为灵活、受到的规则限定也最少。
+Ref：《聪明的阅读者》阳志平. 中信出版社
+202401022002
+上述卡片的「Ref」部分就是这张术语卡的卡片内容的来源：
+《聪明的阅读者》这本书 这本书的作者是阳志平 这本书的出版社是中信出版社 这里的：
+「Ref」是reference的简写，代表「参考」含义 书籍名称如果是中文，就写中文，如果是英文，就写英文 作者名字，如果有英文名，可以在「内容」上额外标注，便于后期查找，但在参考部分可以简写 写上出版社是为了后期查找这本书，为了快速操作可以省略 需要注意的是，卡片的原始参考并不一定只有我们读的某本书。比如我们阅读《聪明的阅读者》第五章（P103），发现作者提到了八种抽样阅读的方法，如果我们这时候要写一张“便利抽样”的术语卡，那么我们仅仅根据这本书中对便利抽样的解释往往是不够的，我们还需要进一步参考其他统计学的书目或网站对便利抽样的说明，这样我们才能对便利抽样有一个相对全面的了解。
+那这时候我们在卡片的末端写下的原始参考就可以类似这样：
+&hellip;&hellip;
+通过上图发现，对便利抽样这个概念的理解，除了《聪明的阅读者》这本书作为参考之外，我还在Wikipedia网站上收集了与便利抽样相关的介绍，这样原始参考就有了两个而不是一个。
+撰写卡片的时间点
+卡片撰写的时间点就是卡片的唯一编码，为什么这里说是“唯一”呢？因为我们可以将时间点精确到“分”，换句话说，我们默认自己一分钟内只输出一张卡片 —— 因为一张卡往往百十来字，无论是手写还是电子版，一分钟以内往往不能同时输出两张卡片，所以我们用精确到“分”的时间点作为我们撰写卡片的唯一编码。用数字表示就类如ABCDEFGHIJKL如下：
+编码 含义 ABCD 四位数年份 EF 两位数月份，月份是单数的，用双数表示（比如3月，用03表示） GH 两位数天数，天数是单数的，用双数表示（比如5日，用05表示） IJ 两位数小时，小时是单数的，用双数表示（比如上午7点，用07表示） Kl 两位数分钟，分钟是单数的，用双数表示（比如9分，用09表示） 比如我现在撰写这篇文章的时间是2024年1月2日下午6点12分，那么如果我这时候我写完了一张卡片，最末端就打上202401021812，它同时包含了“年 － 月 － 日 － 时 － 分”这几个元素。">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="02.卡片的基本格式" />
+<meta property="og:description" content="在输出卡片的过程中，一共有9种卡片可以输出，在具体展开输出之前，我们可以提炼一下卡片输出的基本结构：
+卡片结构 卡片内容 头 卡片标题 身 卡片内容 尾 卡片参考 &#43; 卡片编码 示范卡&hellip;..
+卡片的“头”（标题）
+在卡片头部可能包含要素：
+卡片标题（必选） 卡片数量（可选） 卡片标题就是对需要撰写卡片的一个概括关键词，它可以在撰写卡片之前写，也可以在卡片写完之后写。
+这里的卡片数量并不是是指截止你写这张卡片时一共输出的卡片总数（当然如果你愿意，也可以写），而是比如我们要写卡片时，发现一张卡片并不能写完我们想输出的内容，那么这时候我们可以将卡片分拆为2~3张，那么第一张卡片可以标记为1/2，第二张卡片可以标记为2/2。这时候我们看到这个标记，就知道这张卡片一共有两张，我目前看到的是第一张或者第二张。
+如果是电子版，可以在卡片标题下面写上卡片数量；如果是实体版，可以写在卡片标题的最右边方便识别。
+&hellip;&hellip;
+标题的撰写方法：
+电子版：可以用Markdown语法的#来表示； 手写版：可以借用Markdown语法，同样用#来表示，这样更便捷。 &hellip;&hellip;
+卡片的“身”（内容）
+卡片的“尾”（末段）
+所有卡片在最末端都统一写上两个要素：
+这张卡片内容的原始参考 书写这张卡片的精确时间点 卡片的原始参考有两类，第一类是我们所书写的卡片内容的来源，这类最为常见，比如我们正在阅读《聪明的阅读者》的卡片大法这一章，我们看到「基础卡」这个概念，那么我们可以写一张基础卡的术语卡：
+#术语卡 什么是基础卡？
+基础卡是阳志平老师推荐的卡片大法中的一种，它是指我们在读书时所产生的一些最基本、最普通想法时输出的卡片类型。基础卡的基本模块包括标题、内容、参考、编码四种，相比较另外8种卡片，基础卡使用最为灵活、受到的规则限定也最少。
+Ref：《聪明的阅读者》阳志平. 中信出版社
+202401022002
+上述卡片的「Ref」部分就是这张术语卡的卡片内容的来源：
+《聪明的阅读者》这本书 这本书的作者是阳志平 这本书的出版社是中信出版社 这里的：
+「Ref」是reference的简写，代表「参考」含义 书籍名称如果是中文，就写中文，如果是英文，就写英文 作者名字，如果有英文名，可以在「内容」上额外标注，便于后期查找，但在参考部分可以简写 写上出版社是为了后期查找这本书，为了快速操作可以省略 需要注意的是，卡片的原始参考并不一定只有我们读的某本书。比如我们阅读《聪明的阅读者》第五章（P103），发现作者提到了八种抽样阅读的方法，如果我们这时候要写一张“便利抽样”的术语卡，那么我们仅仅根据这本书中对便利抽样的解释往往是不够的，我们还需要进一步参考其他统计学的书目或网站对便利抽样的说明，这样我们才能对便利抽样有一个相对全面的了解。
+那这时候我们在卡片的末端写下的原始参考就可以类似这样：
+&hellip;&hellip;
+通过上图发现，对便利抽样这个概念的理解，除了《聪明的阅读者》这本书作为参考之外，我还在Wikipedia网站上收集了与便利抽样相关的介绍，这样原始参考就有了两个而不是一个。
+撰写卡片的时间点
+卡片撰写的时间点就是卡片的唯一编码，为什么这里说是“唯一”呢？因为我们可以将时间点精确到“分”，换句话说，我们默认自己一分钟内只输出一张卡片 —— 因为一张卡往往百十来字，无论是手写还是电子版，一分钟以内往往不能同时输出两张卡片，所以我们用精确到“分”的时间点作为我们撰写卡片的唯一编码。用数字表示就类如ABCDEFGHIJKL如下：
+编码 含义 ABCD 四位数年份 EF 两位数月份，月份是单数的，用双数表示（比如3月，用03表示） GH 两位数天数，天数是单数的，用双数表示（比如5日，用05表示） IJ 两位数小时，小时是单数的，用双数表示（比如上午7点，用07表示） Kl 两位数分钟，分钟是单数的，用双数表示（比如9分，用09表示） 比如我现在撰写这篇文章的时间是2024年1月2日下午6点12分，那么如果我这时候我写完了一张卡片，最末端就打上202401021812，它同时包含了“年 － 月 － 日 － 时 － 分”这几个元素。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://Smartreader.top/docs/example/Ch8.%E5%8D%A1%E7%89%87%E9%98%85%E8%AF%BB/%E5%8D%A1%E7%89%87%E7%9A%84%E7%BB%93%E6%9E%84/" /><meta property="article:section" content="docs" />
+
+
+
+<title>02.卡片的基本格式 | Hugo Book</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" >
+<link rel="stylesheet" href="/book.min.33a48f5432973b8ff9a82679d9e45d67f2c15d4399bd2829269455cfe390b5e8.css" integrity="sha256-M6SPVDKXO4/5qCZ52eRdZ/LBXUOZvSgpJpRVz&#43;OQteg=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.f2679c4a5c5713d016c3c2134a44412060988c13b44eb591106286aa1dc0db7f.js" integrity="sha256-8mecSlxXE9AWw8ITSkRBIGCYjBO0TrWREGKGqh3A238=" crossorigin="anonymous"></script>
+
+  <script defer src="/sw.min.88f1afdaf4798d7d3520420dcfe201f928c3d371fdedfc3ae28cd9b6b79544f8.js" integrity="sha256-iPGv2vR5jX01IEINz&#43;IB&#43;SjD03H97fw64ozZtreVRPg=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Hugo Book</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <a href="/docs/example/" class="">Example Site</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/table-of-contents/" class="">Table of Contents</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/table-of-contents/with-toc/" class="">With ToC</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/table-of-contents/without-toc/" class="">Without ToC</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-53120ceca2b854ca4fa7750165495342" class="toggle"  />
+    <label for="section-53120ceca2b854ca4fa7750165495342" class="flex justify-between">
+      <a role="button" class="">Ch5.抽样阅读</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/Ch5.%E6%8A%BD%E6%A0%B7%E9%98%85%E8%AF%BB/how-to-sample-reading-a-book/" class="">01.简单随机抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/Ch5.%E6%8A%BD%E6%A0%B7%E9%98%85%E8%AF%BB/How-to-read-a-book-at-equal-intervals/" class="">02.等距抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/Ch5.%E6%8A%BD%E6%A0%B7%E9%98%85%E8%AF%BB/%E6%95%B4%E7%BE%A4%E6%8A%BD%E6%A0%B7/" class="">03.整群抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/Ch5.%E6%8A%BD%E6%A0%B7%E9%98%85%E8%AF%BB/%E5%88%86%E5%B1%82%E6%8A%BD%E6%A0%B7/" class="">04.分层抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/Ch5.%E6%8A%BD%E6%A0%B7%E9%98%85%E8%AF%BB/%E4%BE%BF%E5%88%A9%E6%8A%BD%E6%A0%B7/" class="">05.便利抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/Ch5.%E6%8A%BD%E6%A0%B7%E9%98%85%E8%AF%BB/%E4%B8%93%E5%AE%B6%E6%8A%BD%E6%A0%B7/" class="">06.专家抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/Ch5.%E6%8A%BD%E6%A0%B7%E9%98%85%E8%AF%BB/%E9%9B%AA%E7%90%83%E6%8A%BD%E6%A0%B7/" class="">07.雪球抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/Ch5.%E6%8A%BD%E6%A0%B7%E9%98%85%E8%AF%BB/%E9%85%8D%E9%A2%9D%E6%8A%BD%E6%A0%B7/" class="">08.配额抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/Ch5.%E6%8A%BD%E6%A0%B7%E9%98%85%E8%AF%BB/%E7%BB%BC%E5%90%88%E7%90%86%E8%A7%A3/" class="">09.综合理解</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-bd95c6cba928c3cd340e59af7157781b" class="toggle" checked />
+    <label for="section-bd95c6cba928c3cd340e59af7157781b" class="flex justify-between">
+      <a role="button" class="">Ch8.卡片阅读</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/Ch8.%E5%8D%A1%E7%89%87%E9%98%85%E8%AF%BB/%E4%BB%80%E4%B9%88%E6%98%AF%E5%8D%A1%E7%89%87/" class="">01.什么是卡片</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/Ch8.%E5%8D%A1%E7%89%87%E9%98%85%E8%AF%BB/%E5%8D%A1%E7%89%87%E7%9A%84%E7%BB%93%E6%9E%84/" class="active">02.卡片的基本格式</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/Ch8.%E5%8D%A1%E7%89%87%E9%98%85%E8%AF%BB/%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3%E4%B8%80%E5%8D%A1%E4%B8%80%E4%BA%8B/" class="">03.如何理解一卡一事</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/Ch8.%E5%8D%A1%E7%89%87%E9%98%85%E8%AF%BB/%E5%A6%82%E4%BD%95%E6%92%B0%E5%86%99%E5%9F%BA%E7%A1%80%E5%8D%A1/" class="">04.如何撰写基础卡</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/Ch8.%E5%8D%A1%E7%89%87%E9%98%85%E8%AF%BB/%E5%A6%82%E4%BD%95%E6%92%B0%E5%86%99%E8%A1%8C%E5%8A%A8%E5%8D%A1/" class="">05.如何撰写行动卡</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/Ch8.%E5%8D%A1%E7%89%87%E9%98%85%E8%AF%BB/%E5%A6%82%E4%BD%95%E6%92%B0%E5%86%99%E6%96%B0%E7%9F%A5%E5%8D%A1/" class="">如何撰写新知卡</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Shortcodes</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/shortcodes/buttons/" class="">Buttons</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/shortcodes/columns/" class="">Columns</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/shortcodes/details/" class="">Details</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/shortcodes/expand/" class="">Expand</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/shortcodes/hints/" class="">Hints</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/shortcodes/mermaid/" class="">Mermaid</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-d3fc1bf6d66cd84b896a0af9f40cb1d5" class="toggle"  />
+    <label for="section-d3fc1bf6d66cd84b896a0af9f40cb1d5" class="flex justify-between">
+      <a href="/docs/shortcodes/section/" class="">Section</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/shortcodes/section/first-page/" class="">First Page</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/shortcodes/section/second-page/" class="">Second Page</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/shortcodes/tabs/" class="">Tabs</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/shortcodes/katex/" class="">KaTeX</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/posts/"  >
+        Blog
+      </a>
+  </li>
+  
+  <li>
+    <a href="https://github.com/alex-shpak/hugo-book"  target="_blank" rel="noopener">
+        Github
+      </a>
+  </li>
+  
+  <li>
+    <a href="https://themes.gohugo.io/hugo-book/"  target="_blank" rel="noopener">
+        Hugo Themes
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>02.卡片的基本格式</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents"></nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><p>在输出卡片的过程中，一共有9种卡片可以输出，在具体展开输出之前，我们可以提炼一下卡片输出的基本结构：</p>
+<table>
+<thead>
+<tr>
+<th>卡片结构</th>
+<th>卡片内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>头</td>
+<td>卡片标题</td>
+</tr>
+<tr>
+<td>身</td>
+<td>卡片内容</td>
+</tr>
+<tr>
+<td>尾</td>
+<td>卡片参考 + 卡片编码</td>
+</tr>
+</tbody>
+</table>
+<p>示范卡&hellip;..</p>
+<p>卡片的“头”（标题）</p>
+<p>在卡片头部可能包含要素：</p>
+<ol>
+<li>卡片标题（必选）</li>
+<li>卡片数量（可选）</li>
+</ol>
+<p>卡片标题就是对需要撰写卡片的一个概括关键词，它可以在撰写卡片之前写，也可以在卡片写完之后写。</p>
+<p>这里的卡片数量并不是是指截止你写这张卡片时一共输出的卡片总数（当然如果你愿意，也可以写），而是比如我们要写卡片时，发现一张卡片并不能写完我们想输出的内容，那么这时候我们可以将卡片分拆为2~3张，那么第一张卡片可以标记为1/2，第二张卡片可以标记为2/2。这时候我们看到这个标记，就知道这张卡片一共有两张，我目前看到的是第一张或者第二张。</p>
+<p>如果是电子版，可以在卡片标题下面写上卡片数量；如果是实体版，可以写在卡片标题的最右边方便识别。</p>
+<p>&hellip;&hellip;</p>
+<p>标题的撰写方法：</p>
+<ul>
+<li>电子版：可以用Markdown语法的<code>#</code>来表示；</li>
+<li>手写版：可以借用Markdown语法，同样用<code>#</code>来表示，这样更便捷。</li>
+</ul>
+<p>&hellip;&hellip;</p>
+<p>卡片的“身”（内容）</p>
+<p>卡片的“尾”（末段）</p>
+<p>所有卡片在最末端都统一写上两个要素：</p>
+<ol>
+<li>这张卡片内容的原始参考</li>
+<li>书写这张卡片的精确时间点</li>
+</ol>
+<p>卡片的原始参考有两类，第一类是我们所书写的卡片内容的来源，这类最为常见，比如我们正在阅读《聪明的阅读者》的卡片大法这一章，我们看到「基础卡」这个概念，那么我们可以写一张基础卡的术语卡：</p>
+<blockquote>
+<p>#术语卡  什么是基础卡？</p>
+<p>基础卡是阳志平老师推荐的卡片大法中的一种，它是指我们在读书时所产生的一些最基本、最普通想法时输出的卡片类型。基础卡的基本模块包括标题、内容、参考、编码四种，相比较另外8种卡片，基础卡使用最为灵活、受到的规则限定也最少。</p>
+<p>Ref：《聪明的阅读者》阳志平. 中信出版社</p>
+<p>202401022002</p>
+</blockquote>
+<p>上述卡片的「Ref」部分就是这张术语卡的卡片内容的来源：</p>
+<ol>
+<li>《聪明的阅读者》这本书</li>
+<li>这本书的作者是阳志平</li>
+<li>这本书的出版社是中信出版社</li>
+</ol>
+<p>这里的：</p>
+<ol>
+<li>「Ref」是reference的简写，代表「参考」含义</li>
+<li>书籍名称如果是中文，就写中文，如果是英文，就写英文</li>
+<li>作者名字，如果有英文名，可以在「内容」上额外标注，便于后期查找，但在参考部分可以简写</li>
+<li>写上出版社是为了后期查找这本书，为了快速操作可以省略</li>
+</ol>
+<p>需要注意的是，卡片的原始参考并不一定只有我们读的某本书。比如我们阅读《聪明的阅读者》第五章（P103），发现作者提到了八种抽样阅读的方法，如果我们这时候要写一张“便利抽样”的术语卡，那么我们仅仅根据这本书中对便利抽样的解释往往是不够的，我们还需要进一步参考其他统计学的书目或网站对便利抽样的说明，这样我们才能对便利抽样有一个相对全面的了解。</p>
+<p>那这时候我们在卡片的末端写下的原始参考就可以类似这样：</p>
+<p>&hellip;&hellip;</p>
+<p>通过上图发现，对便利抽样这个概念的理解，除了《聪明的阅读者》这本书作为参考之外，我还在Wikipedia网站上收集了与便利抽样相关的介绍，这样原始参考就有了两个而不是一个。</p>
+<p>撰写卡片的时间点</p>
+<p>卡片撰写的时间点就是卡片的唯一编码，为什么这里说是“唯一”呢？因为我们可以将时间点精确到“分”，换句话说，我们默认自己一分钟内只输出一张卡片 —— 因为一张卡往往百十来字，无论是手写还是电子版，一分钟以内往往不能同时输出两张卡片，所以我们用精确到“分”的时间点作为我们撰写卡片的唯一编码。用数字表示就类如<code>ABCDEFGHIJKL</code>如下：</p>
+<table>
+<thead>
+<tr>
+<th>编码</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ABCD</td>
+<td>四位数年份</td>
+</tr>
+<tr>
+<td>EF</td>
+<td>两位数月份，月份是单数的，用双数表示（比如3月，用<code>03</code>表示）</td>
+</tr>
+<tr>
+<td>GH</td>
+<td>两位数天数，天数是单数的，用双数表示（比如5日，用<code>05</code>表示）</td>
+</tr>
+<tr>
+<td>IJ</td>
+<td>两位数小时，小时是单数的，用双数表示（比如上午7点，用<code>07</code>表示）</td>
+</tr>
+<tr>
+<td>Kl</td>
+<td>两位数分钟，分钟是单数的，用双数表示（比如9分，用<code>09</code>表示）</td>
+</tr>
+</tbody>
+</table>
+<p>比如我现在撰写这篇文章的时间是2024年1月2日下午6点12分，那么如果我这时候我写完了一张卡片，最末端就打上<code>202401021812</code>，它同时包含了“年 － 月 － 日 － 时 － 分”这几个元素。</p>
+<p>在电子版卡片的撰写时，如果每次都输入12位数字会非常繁琐，我们可以借用输入法的“自定义短语”功能，将这个12位的数字快速定义，用简写方式就能快速输出。以搜狗输入法为例，我们可以点击搜狗输入法图标后出现的<code>偏好设置</code> - <code>高级</code> - <code>自定义短语设置</code> 里面，添加一个简写式：</p>
+<p>#$year$month$day_dd$fullhour$minute</p>
+<p>
+  <img src="https://pbox.online/202401022013177.png" alt="image-20240102201308129" /></p>
+<p>如上图所示：</p>
+<ol>
+<li>我自己采用的缩写是「rq」，也即「日期」一词两个字的打头字母，</li>
+<li>「出现位置」的意思是当我用搜狗拼音输入法打出<code>rq</code>两个字母时，在光标处显示对应精确时间的位置，我写的 <code>1</code>，意味着它会出现在第一位供我选择，而这时候我只需要按一下回车键就能自动显示精确时间了。</li>
+<li>下面的短语规则是搜狗拼音认可的日期与时间的简写式。</li>
+</ol>
+<p>具体操作示范如下：</p>
+<p>
+  <img src="https://pbox.online/202401022019017.gif" alt="" /></p>
+<p>一旦我设置完成后，每次只需要输入<code>rq</code>（“日期”拼音的打头字母缩写），输入法就能快速将此时此刻包含“年 － 月 － 日 － 时 － 分”的编码打出来，为我们节省了大量的时间。</p>
+<p>如果是手写卡片，我们在卡片末端写上时间点可以直接通过手表、手机、总表等查看当时的时间，也可以按照这个格式输出。</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/main/exampleSite/content/docs/example/Ch8.%e5%8d%a1%e7%89%87%e9%98%85%e8%af%bb/%e5%8d%a1%e7%89%87%e7%9a%84%e7%bb%93%e6%9e%84.md" target="_blank" rel="noopener">
+      <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents"></nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

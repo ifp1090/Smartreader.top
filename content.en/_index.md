@@ -3,39 +3,16 @@ title: Introduction
 type: docs
 ---
 
-# Acerbo datus maxime
+这一次，彻底读懂一本关于读书的书。
 
-{{< columns >}}
-## Astris ipse furtiva
+这是一个将《聪明的阅读者》读懂并操作示范的网站
 
-Est in vagis et Pittheus tu arge accipiter regia iram vocatur nurus. Omnes ut
-olivae sensit **arma sorori** deducit, inesset **crudus**, ego vetuere aliis,
-modo arsit? Utinam rapta fiducia valuere litora _adicit cursu_, ad facies
+《聪明的阅读者》一书来自于阳志平老师数十年的读书经验精华。全书全书重点解决三大难题：
 
-<--->
+- 何为读
+- 如何读
+- 读什么
 
-## Suis quot vota
+如何将《聪明的阅读者》中提到的抽样阅读、结构阅读、卡片阅读、文本细读、主题阅读五大阅读方法读明白并懂得如何操作？
 
-Ea _furtique_ risere fratres edidit terrae magis. Colla tam mihi tenebat:
-miseram excita suadent es pecudes iam. Concilio _quam_ velatus posset ait quod
-nunc! Fragosis suae dextra geruntur functus vulgata.
-{{< /columns >}}
-
-
-## Tempora nisi nunc
-
-Lorem **markdownum** emicat gestu. Cannis sol pressit ducta. **Est** Idaei,
-tremens ausim se tutaeque, illi ulnis hausit, sed, lumina cutem. Quae avis
-sequens!
-
-    var panel = ram_design;
-    if (backup + system) {
-        file.readPoint = network_native;
-        sidebar_engine_device(cell_tftp_raster,
-                dual_login_paper.adf_vci.application_reader_design(
-                graphicsNvramCdma, lpi_footer_snmp, integer_model));
-    }
-
-## Locis suis novi cum suoque decidit eadem
-
-Idmoniae ripis, at aves, ali missa adest, ut _et autem_, et ab?
+现在将为你一一解析。
