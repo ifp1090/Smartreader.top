@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="如何对一本书进行配额抽样阅读？ # 1 # 前面我们学习了分层抽样，理解了分层抽样的三个基本步骤：
+将全书的章节进行分组 对各组章节进行随机抽样 汇总抽样的章节展开阅读 在这个过程中的第二步，分层抽样遵循的是随机性，确保分组后的每个章节都有相等的概率被选中，这种方法的优势在于它减少了抽样偏差，提高了抽中样章在组内的代表性，避免认人为干预。但在现实阅读情境中，我们主观上可能对刚分好层的章节产生一定兴趣或需求，我们不需要在通过随机抽样的方式，而是根据自己的兴趣或我们拥有的便利条件等方式直接选取相应的章节开始阅读，这就是配额抽样与分层抽样的关键区别。
+换句话说，配额抽样是一种非概率抽样方法，我们将整本书划分为基于特定特征或主题的多个子群体（层）后，根据每个子群体在整体中的重要性或比重，人为地选择一定数量的章节进行阅读。
+配额抽样阅读的使用前提 # 配额阅读抽样往往在下述前提下使用：
+对某本书感兴趣，但是对这本书并没有太细致的了解。 阅读的时间与精力比较有限，没有阅读的充裕时间或情境，但又特别想阅读某些书。 尚不太具备复杂概率抽样或复杂非概率抽样的前提条件。比如没有找到专家对某本书的阅读建议或者对分层抽样方法不太熟悉。 2 # 配额抽样简单来说可以分为三步：
+1. 将全书分成不同的层级 # 由于配额抽样是一种非概率的抽样方法，所以在整个过程中，我们的主观意识起到了主要引领作用比如豆瓣网友@行动社交找潇潇 对《聪明的阅读者》一书的书评第一句话是这样的：
+这种阅读策略就可以简单理解她采用了配额抽样的阅读思路 —— 将《聪明的阅读者》分成卡片类与非卡片类两组，这就是一种简单的分层。
+又比如《儿童心理学》这本书，通过查看目录我们可以将其简单归类为「情境学习」和「知识学习」两个主要维度：
+类似这种分类相比分层阅读的分类来说，会更加主观、灵活且快速。当然我们在这一步还可以借助便利抽样、专家抽样的方式对全书进行分组。
+2. 为不同的层级确认一个配额 # 依旧以前面的《儿童心理学》为例，如果按照原来的分层阅读抽样的话，我们接下来就要对「情境学习」和「知识学习」两个章群进行随机抽样，但在配额抽样中，我们可以更加主观地去决定配额 —— 我们一共阅读3章。而这里的「3」，就是我们对《儿童心理学》这本书的主观配额设定。
+接下来，我们对于前面的「3」就要在「情境学习」和「知识学习」两个章组中去分解，比如我们主观上决定阅读第三章和第四章、而对于「知识学习」组，我们主观上决定第五章，然后我们就开始阅读自己制定的章节了。
+除此之外，我们在这一步的操作还可以借助便利抽样、专家抽样、雪球抽样等方式进行配额。所以整个配额抽样在过程中会比较灵活、自主且主观。
+配额抽样可以用如下图示简化理解：
+3 # 到这里，我们会发现配额阅读抽样与分层阅读抽样都会对书本进行分类，接着抽取相应的章节开始阅读。但他们之间的区别在于，分层阅读抽样在分层之后通过简单随机抽样来确认章节被平均抽中的可能性，而配额抽样则是依赖于读者自己的偏好来选择 —— 从最开始的全书分类、到分好类之后的配额、再到对配额章节的选择，可以便利抽样、可以专家抽样也可以雪球抽样，整个过程体现出明显的读者个人倾向，这也是配额抽样的重要特征。
+通过上述分析我们发现，配额阅读抽样并不需要严谨的抽样规则，整个操作过程更加主观、便捷。但配额抽样也会遭遇到一些问题，如果我们无法清晰的给到全书的分层标准，就无法清晰对全书分层进而无法配额。此外，又与配额抽样依赖于读者本人的自由选择，所以配额可能会受到阅读者本人认知偏见的影响，比如阅读者的阅读偏好、阅读者希望尽快通过阅读找到某些问题的答案，这样就无法将配额抽样的章节覆盖到整本书核心知识的理解上。">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="08.配额抽样" />
+<meta property="og:description" content="如何对一本书进行配额抽样阅读？ # 1 # 前面我们学习了分层抽样，理解了分层抽样的三个基本步骤：
+将全书的章节进行分组 对各组章节进行随机抽样 汇总抽样的章节展开阅读 在这个过程中的第二步，分层抽样遵循的是随机性，确保分组后的每个章节都有相等的概率被选中，这种方法的优势在于它减少了抽样偏差，提高了抽中样章在组内的代表性，避免认人为干预。但在现实阅读情境中，我们主观上可能对刚分好层的章节产生一定兴趣或需求，我们不需要在通过随机抽样的方式，而是根据自己的兴趣或我们拥有的便利条件等方式直接选取相应的章节开始阅读，这就是配额抽样与分层抽样的关键区别。
+换句话说，配额抽样是一种非概率抽样方法，我们将整本书划分为基于特定特征或主题的多个子群体（层）后，根据每个子群体在整体中的重要性或比重，人为地选择一定数量的章节进行阅读。
+配额抽样阅读的使用前提 # 配额阅读抽样往往在下述前提下使用：
+对某本书感兴趣，但是对这本书并没有太细致的了解。 阅读的时间与精力比较有限，没有阅读的充裕时间或情境，但又特别想阅读某些书。 尚不太具备复杂概率抽样或复杂非概率抽样的前提条件。比如没有找到专家对某本书的阅读建议或者对分层抽样方法不太熟悉。 2 # 配额抽样简单来说可以分为三步：
+1. 将全书分成不同的层级 # 由于配额抽样是一种非概率的抽样方法，所以在整个过程中，我们的主观意识起到了主要引领作用比如豆瓣网友@行动社交找潇潇 对《聪明的阅读者》一书的书评第一句话是这样的：
+这种阅读策略就可以简单理解她采用了配额抽样的阅读思路 —— 将《聪明的阅读者》分成卡片类与非卡片类两组，这就是一种简单的分层。
+又比如《儿童心理学》这本书，通过查看目录我们可以将其简单归类为「情境学习」和「知识学习」两个主要维度：
+类似这种分类相比分层阅读的分类来说，会更加主观、灵活且快速。当然我们在这一步还可以借助便利抽样、专家抽样的方式对全书进行分组。
+2. 为不同的层级确认一个配额 # 依旧以前面的《儿童心理学》为例，如果按照原来的分层阅读抽样的话，我们接下来就要对「情境学习」和「知识学习」两个章群进行随机抽样，但在配额抽样中，我们可以更加主观地去决定配额 —— 我们一共阅读3章。而这里的「3」，就是我们对《儿童心理学》这本书的主观配额设定。
+接下来，我们对于前面的「3」就要在「情境学习」和「知识学习」两个章组中去分解，比如我们主观上决定阅读第三章和第四章、而对于「知识学习」组，我们主观上决定第五章，然后我们就开始阅读自己制定的章节了。
+除此之外，我们在这一步的操作还可以借助便利抽样、专家抽样、雪球抽样等方式进行配额。所以整个配额抽样在过程中会比较灵活、自主且主观。
+配额抽样可以用如下图示简化理解：
+3 # 到这里，我们会发现配额阅读抽样与分层阅读抽样都会对书本进行分类，接着抽取相应的章节开始阅读。但他们之间的区别在于，分层阅读抽样在分层之后通过简单随机抽样来确认章节被平均抽中的可能性，而配额抽样则是依赖于读者自己的偏好来选择 —— 从最开始的全书分类、到分好类之后的配额、再到对配额章节的选择，可以便利抽样、可以专家抽样也可以雪球抽样，整个过程体现出明显的读者个人倾向，这也是配额抽样的重要特征。
+通过上述分析我们发现，配额阅读抽样并不需要严谨的抽样规则，整个操作过程更加主观、便捷。但配额抽样也会遭遇到一些问题，如果我们无法清晰的给到全书的分层标准，就无法清晰对全书分层进而无法配额。此外，又与配额抽样依赖于读者本人的自由选择，所以配额可能会受到阅读者本人认知偏见的影响，比如阅读者的阅读偏好、阅读者希望尽快通过阅读找到某些问题的答案，这样就无法将配额抽样的章节覆盖到整本书核心知识的理解上。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://Smartreader.top/docs/example/Ch5.-%E6%8A%BD%E6%A0%B7%E9%98%85%E8%AF%BB/%E9%85%8D%E9%A2%9D%E6%8A%BD%E6%A0%B7/" /><meta property="article:section" content="docs" />
+
+
+
+<title>08.配额抽样 | GY&#39;s 1st Book</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" >
+<link rel="stylesheet" href="/book.min.4f0117e74e5337280f18eb9641eae520cb4b25adcf5dd64fafad4664145a5957.css" integrity="sha256-TwEX505TNygPGOuWQerlIMtLJa3PXdZPr61GZBRaWVc=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.3133b0fbeb7f2afce8cdf245a6b7887cc934119755fc2381f704651f3bdd1b0d.js" integrity="sha256-MTOw&#43;&#43;t/KvzozfJFpreIfMk0EZdV/COB9wRlHzvdGw0=" crossorigin="anonymous"></script>
+
+  <script defer src="/sw.min.88f1afdaf4798d7d3520420dcfe201f928c3d371fdedfc3ae28cd9b6b79544f8.js" integrity="sha256-iPGv2vR5jX01IEINz&#43;IB&#43;SjD03H97fw64ozZtreVRPg=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>GY&#39;s 1st Book</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <a href="/docs/example/" class="">五种阅读方法</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-32264a72a5f173e3bc6f4374f711e04a" class="toggle" checked />
+    <label for="section-32264a72a5f173e3bc6f4374f711e04a" class="flex justify-between">
+      <a role="button" class="">Ch5. 抽样阅读</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/Ch5.-%E6%8A%BD%E6%A0%B7%E9%98%85%E8%AF%BB/how-to-sample-reading-a-book/" class="">01.简单随机抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/Ch5.-%E6%8A%BD%E6%A0%B7%E9%98%85%E8%AF%BB/How-to-read-a-book-at-equal-intervals/" class="">02.等距抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/Ch5.-%E6%8A%BD%E6%A0%B7%E9%98%85%E8%AF%BB/%E6%95%B4%E7%BE%A4%E6%8A%BD%E6%A0%B7/" class="">03.整群抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/Ch5.-%E6%8A%BD%E6%A0%B7%E9%98%85%E8%AF%BB/%E5%88%86%E5%B1%82%E6%8A%BD%E6%A0%B7/" class="">04.分层抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/Ch5.-%E6%8A%BD%E6%A0%B7%E9%98%85%E8%AF%BB/%E4%BE%BF%E5%88%A9%E6%8A%BD%E6%A0%B7/" class="">05.便利抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/Ch5.-%E6%8A%BD%E6%A0%B7%E9%98%85%E8%AF%BB/%E4%B8%93%E5%AE%B6%E6%8A%BD%E6%A0%B7/" class="">06.专家抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/Ch5.-%E6%8A%BD%E6%A0%B7%E9%98%85%E8%AF%BB/%E9%9B%AA%E7%90%83%E6%8A%BD%E6%A0%B7/" class="">07.雪球抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/Ch5.-%E6%8A%BD%E6%A0%B7%E9%98%85%E8%AF%BB/%E9%85%8D%E9%A2%9D%E6%8A%BD%E6%A0%B7/" class="active">08.配额抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/Ch5.-%E6%8A%BD%E6%A0%B7%E9%98%85%E8%AF%BB/%E7%BB%BC%E5%90%88%E7%90%86%E8%A7%A3/" class="">09.综合理解</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-15fe20d7327ea2b86df51e6ba23aee8e" class="toggle"  />
+    <label for="section-15fe20d7327ea2b86df51e6ba23aee8e" class="flex justify-between">
+      <a role="button" class="">Ch8. 卡片阅读</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/Ch8.-%E5%8D%A1%E7%89%87%E9%98%85%E8%AF%BB/%E5%A6%82%E4%BD%95%E6%92%B0%E5%86%99%E5%9F%BA%E7%A1%80%E5%8D%A1/" class="">01.如何撰写基础卡</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/Ch8.-%E5%8D%A1%E7%89%87%E9%98%85%E8%AF%BB/%E5%A6%82%E4%BD%95%E6%92%B0%E5%86%99%E8%A1%8C%E5%8A%A8%E5%8D%A1/" class="">02.如何撰写行动卡</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/Ch8.-%E5%8D%A1%E7%89%87%E9%98%85%E8%AF%BB/%E5%A6%82%E4%BD%95%E6%92%B0%E5%86%99%E6%96%B0%E7%9F%A5%E5%8D%A1/" class="">03.如何撰写新知卡</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>08.配额抽样</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#如何对一本书进行配额抽样阅读">如何对一本书进行配额抽样阅读？</a>
+      <ul>
+        <li><a href="#1">1</a></li>
+        <li><a href="#配额抽样阅读的使用前提">配额抽样阅读的使用前提</a></li>
+        <li><a href="#2">2</a>
+          <ul>
+            <li></li>
+          </ul>
+        </li>
+        <li><a href="#3">3</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="如何对一本书进行配额抽样阅读">
+  如何对一本书进行配额抽样阅读？
+  <a class="anchor" href="#%e5%a6%82%e4%bd%95%e5%af%b9%e4%b8%80%e6%9c%ac%e4%b9%a6%e8%bf%9b%e8%a1%8c%e9%85%8d%e9%a2%9d%e6%8a%bd%e6%a0%b7%e9%98%85%e8%af%bb">#</a>
+</h1>
+<h2 id="1">
+  1
+  <a class="anchor" href="#1">#</a>
+</h2>
+<p>前面我们学习了分层抽样，理解了分层抽样的三个基本步骤：</p>
+<ol>
+<li>将全书的章节进行分组</li>
+<li>对各组章节进行随机抽样</li>
+<li>汇总抽样的章节展开阅读</li>
+</ol>
+<p>
+  <img src="https://pbox.online/202312181043581.png" alt="image-20231218104355498" /></p>
+<p>在这个过程中的第二步，分层抽样遵循的是随机性，确保分组后的每个章节都有相等的概率被选中，这种方法的优势在于它减少了抽样偏差，提高了抽中样章在组内的代表性，避免认人为干预。但在现实阅读情境中，我们主观上可能对刚分好层的章节产生一定兴趣或需求，我们不需要在通过随机抽样的方式，而是根据自己的兴趣或我们拥有的便利条件等方式直接选取相应的章节开始阅读，这就是配额抽样与分层抽样的关键区别。</p>
+<p>换句话说，配额抽样是一种非概率抽样方法，我们将整本书划分为基于特定特征或主题的多个子群体（层）后，根据每个子群体在整体中的重要性或比重，人为地选择一定数量的章节进行阅读。</p>
+<h2 id="配额抽样阅读的使用前提">
+  配额抽样阅读的使用前提
+  <a class="anchor" href="#%e9%85%8d%e9%a2%9d%e6%8a%bd%e6%a0%b7%e9%98%85%e8%af%bb%e7%9a%84%e4%bd%bf%e7%94%a8%e5%89%8d%e6%8f%90">#</a>
+</h2>
+<p>配额阅读抽样往往在下述前提下使用：</p>
+<ol>
+<li>对某本书感兴趣，但是对这本书并没有太细致的了解。</li>
+<li>阅读的时间与精力比较有限，没有阅读的充裕时间或情境，但又特别想阅读某些书。</li>
+<li>尚不太具备复杂概率抽样或复杂非概率抽样的前提条件。比如没有找到专家对某本书的阅读建议或者对分层抽样方法不太熟悉。</li>
+</ol>
+<h2 id="2">
+  2
+  <a class="anchor" href="#2">#</a>
+</h2>
+<p>配额抽样简单来说可以分为三步：</p>
+<h4 id="1-将全书分成不同的层级">
+  1. 将全书分成不同的层级
+  <a class="anchor" href="#1-%e5%b0%86%e5%85%a8%e4%b9%a6%e5%88%86%e6%88%90%e4%b8%8d%e5%90%8c%e7%9a%84%e5%b1%82%e7%ba%a7">#</a>
+</h4>
+<p>由于配额抽样是一种非概率的抽样方法，所以在整个过程中，我们的主观意识起到了主要引领作用比如豆瓣网友@行动社交找潇潇 对《聪明的阅读者》一书的书评第一句话是这样的：</p>
+<p>
+  <img src="https://pbox.online/202305292059491.png" alt="image-20230529205923431" /></p>
+<p>这种阅读策略就可以简单理解她采用了配额抽样的阅读思路 —— 将《聪明的阅读者》分成<strong>卡片类与非卡片类</strong>两组，这就是一种简单的分层。</p>
+<p>又比如《儿童心理学》这本书，通过查看目录我们可以将其简单归类为「情境学习」和「知识学习」两个主要维度：</p>
+<p>
+  <img src="https://pbox.online/202312211043296.png" alt="image-20231221104300177" /></p>
+<p>类似这种分类相比分层阅读的分类来说，会更加主观、灵活且快速。当然我们在这一步还可以借助便利抽样、专家抽样的方式对全书进行分组。</p>
+<h4 id="2-为不同的层级确认一个配额">
+  2. 为不同的层级确认一个配额
+  <a class="anchor" href="#2-%e4%b8%ba%e4%b8%8d%e5%90%8c%e7%9a%84%e5%b1%82%e7%ba%a7%e7%a1%ae%e8%ae%a4%e4%b8%80%e4%b8%aa%e9%85%8d%e9%a2%9d">#</a>
+</h4>
+<p>依旧以前面的《儿童心理学》为例，如果按照原来的分层阅读抽样的话，我们接下来就要对「情境学习」和「知识学习」两个章群进行随机抽样，但在配额抽样中，我们可以更加主观地去决定配额 —— 我们一共阅读3章。而这里的「3」，就是我们对《儿童心理学》这本书的主观配额设定。</p>
+<p>接下来，我们对于前面的「3」就要在「情境学习」和「知识学习」两个章组中去分解，比如我们主观上决定阅读第三章和第四章、而对于「知识学习」组，我们主观上决定第五章，然后我们就开始阅读自己制定的章节了。</p>
+<p>除此之外，我们在这一步的操作还可以借助便利抽样、专家抽样、雪球抽样等方式进行配额。所以整个配额抽样在过程中会比较灵活、自主且主观。</p>
+<p>配额抽样可以用如下图示简化理解：</p>
+<p>
+  <img src="https://pbox.online/202312211109647.png" alt="image-20231221110915578" /></p>
+<h2 id="3">
+  3
+  <a class="anchor" href="#3">#</a>
+</h2>
+<p>到这里，我们会发现配额阅读抽样与分层阅读抽样都会对书本进行分类，接着抽取相应的章节开始阅读。但他们之间的区别在于，分层阅读抽样在分层之后通过简单随机抽样来确认章节被平均抽中的可能性，而配额抽样则是依赖于读者自己的偏好来选择 —— 从最开始的全书分类、到分好类之后的配额、再到对配额章节的选择，可以便利抽样、可以专家抽样也可以雪球抽样，整个过程体现出明显的读者个人倾向，这也是配额抽样的重要特征。</p>
+<p>通过上述分析我们发现，配额阅读抽样并不需要严谨的抽样规则，整个操作过程更加主观、便捷。但配额抽样也会遭遇到一些问题，如果我们无法清晰的给到全书的分层标准，就无法清晰对全书分层进而无法配额。此外，又与配额抽样依赖于读者本人的自由选择，所以配额可能会受到阅读者本人认知偏见的影响，比如阅读者的阅读偏好、阅读者希望尽快通过阅读找到某些问题的答案，这样就无法将配额抽样的章节覆盖到整本书核心知识的理解上。</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#如何对一本书进行配额抽样阅读">如何对一本书进行配额抽样阅读？</a>
+      <ul>
+        <li><a href="#1">1</a></li>
+        <li><a href="#配额抽样阅读的使用前提">配额抽样阅读的使用前提</a></li>
+        <li><a href="#2">2</a>
+          <ul>
+            <li></li>
+          </ul>
+        </li>
+        <li><a href="#3">3</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content=" 1 # 无论是概率抽样阅读还是非概率抽样阅读，我们的目的都是主动对阅读的书目做出假设：
+抽样方法 假设 简单随机抽样 80/20法则、借助随机性可以消除章节选择偏差 等距抽样 80/20法则、借助章节之间的等距抽样可以消除章节选择偏差 分层抽样 书中的不同章节可以组成多个彼此独立的章群、借助随机性可以消除章节选择偏差 整群抽样 书中的不同章节可以组成多个彼此独立的章群、全部阅读其中一个章群可以减少书中内容的理解偏差 便利抽样 身边有可以帮助促进对阅读的书进行理解的情境 专家抽样 当自己没有足够判断力时可以借助专家意见对全书的重点进行理解 雪球抽样 书中的章节与章节之间是有关联的，利用这种关联可以逐步加深对书中内容的理解 配额抽样 借助自己的判断叠加非随机方式（便利/专家/雪球）可以帮助深入理解书中的内容 所以，通过在阅读之前就预设「假设」，能够帮助我们更快启动阅读行为去验证种种假设。在以上抽样方法中，简单随机抽样阅读、等距抽样阅读、整群抽样阅读、分层抽样阅读都强调章节选择的随机性。概率抽样阅读旨在以客观角度引入随机化选择消除人为偏见，所以它体现了书本所有章节都有被选择到的公平机会。简单来说，非概率抽样的主要决定因素是「工具」。
+概率抽样阅读简化图示如下： # 选择概率抽样阅读的前提 # 阅读者希望最大程度减少对全书的抽样偏差，规避人为抽样的样章导致对全书代表性过高或代表性不足的风险。 当一本书包含的主题、叙事、人物、情节等非常多样化时，使用概率抽样能够最大幅度增加代表全书的样本章节。 而诸如便利抽样阅读、专家抽样阅读、雪球抽样阅读和配额抽样阅读，都属于非概率的抽样方法，它们不考虑全书章节都被平均选中的可能性，反而更依赖阅读者本人的主观意愿来选择样本。比如阅读者在阅读之前已经设定的相对明确的阅读目标、阅读者已有的知识和经验、阅读者的主观判断、阅读者当前拥有的时空情境、人际、情绪等阅读条件的便利性等。简单来说，非概率抽样的主要决定因素是「人」。
+非概率抽样阅读简化图示如下： # 2 # 因为非概率章节抽样不考虑整本书的所有章节，所以在下述情形更可能采取非概率抽样方法：
+阅读者在阅读之前已经明确希望对某些章节进行阅读而不希望对全书展开理解。 阅读者希望对书中某一个章节做一些试探性的阅读，看看能不能激活自己的阅读兴趣。 阅读者当前所拥有的抽样条件相当有限，不希望自己花太多时间精力就能快速找到章节。 概率抽样阅读与非概率抽样阅读的整体区别如下：
+要点 概率抽样阅读 非概率抽样阅读 抽取的样章对全书代表的程度 ↓ ↑ 抽样过程中对阅读者已有知识或经验的依赖程度 ↓ ↑ 抽样过程中对计算机（随机生成数据）的依赖程度 ↑ ↓ 抽样过程中对阅读者当前拥有的时空/人际/情绪等情境的依赖程度 ↓ ↑ 整体抽样的时间心力成本消耗程度 ↑ ↓ ">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="09.综合理解" />
+<meta property="og:description" content=" 1 # 无论是概率抽样阅读还是非概率抽样阅读，我们的目的都是主动对阅读的书目做出假设：
+抽样方法 假设 简单随机抽样 80/20法则、借助随机性可以消除章节选择偏差 等距抽样 80/20法则、借助章节之间的等距抽样可以消除章节选择偏差 分层抽样 书中的不同章节可以组成多个彼此独立的章群、借助随机性可以消除章节选择偏差 整群抽样 书中的不同章节可以组成多个彼此独立的章群、全部阅读其中一个章群可以减少书中内容的理解偏差 便利抽样 身边有可以帮助促进对阅读的书进行理解的情境 专家抽样 当自己没有足够判断力时可以借助专家意见对全书的重点进行理解 雪球抽样 书中的章节与章节之间是有关联的，利用这种关联可以逐步加深对书中内容的理解 配额抽样 借助自己的判断叠加非随机方式（便利/专家/雪球）可以帮助深入理解书中的内容 所以，通过在阅读之前就预设「假设」，能够帮助我们更快启动阅读行为去验证种种假设。在以上抽样方法中，简单随机抽样阅读、等距抽样阅读、整群抽样阅读、分层抽样阅读都强调章节选择的随机性。概率抽样阅读旨在以客观角度引入随机化选择消除人为偏见，所以它体现了书本所有章节都有被选择到的公平机会。简单来说，非概率抽样的主要决定因素是「工具」。
+概率抽样阅读简化图示如下： # 选择概率抽样阅读的前提 # 阅读者希望最大程度减少对全书的抽样偏差，规避人为抽样的样章导致对全书代表性过高或代表性不足的风险。 当一本书包含的主题、叙事、人物、情节等非常多样化时，使用概率抽样能够最大幅度增加代表全书的样本章节。 而诸如便利抽样阅读、专家抽样阅读、雪球抽样阅读和配额抽样阅读，都属于非概率的抽样方法，它们不考虑全书章节都被平均选中的可能性，反而更依赖阅读者本人的主观意愿来选择样本。比如阅读者在阅读之前已经设定的相对明确的阅读目标、阅读者已有的知识和经验、阅读者的主观判断、阅读者当前拥有的时空情境、人际、情绪等阅读条件的便利性等。简单来说，非概率抽样的主要决定因素是「人」。
+非概率抽样阅读简化图示如下： # 2 # 因为非概率章节抽样不考虑整本书的所有章节，所以在下述情形更可能采取非概率抽样方法：
+阅读者在阅读之前已经明确希望对某些章节进行阅读而不希望对全书展开理解。 阅读者希望对书中某一个章节做一些试探性的阅读，看看能不能激活自己的阅读兴趣。 阅读者当前所拥有的抽样条件相当有限，不希望自己花太多时间精力就能快速找到章节。 概率抽样阅读与非概率抽样阅读的整体区别如下：
+要点 概率抽样阅读 非概率抽样阅读 抽取的样章对全书代表的程度 ↓ ↑ 抽样过程中对阅读者已有知识或经验的依赖程度 ↓ ↑ 抽样过程中对计算机（随机生成数据）的依赖程度 ↑ ↓ 抽样过程中对阅读者当前拥有的时空/人际/情绪等情境的依赖程度 ↓ ↑ 整体抽样的时间心力成本消耗程度 ↑ ↓ " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://Smartreader.top/docs/example/Ch5.-%E6%8A%BD%E6%A0%B7%E9%98%85%E8%AF%BB/%E7%BB%BC%E5%90%88%E7%90%86%E8%A7%A3/" /><meta property="article:section" content="docs" />
+
+
+
+<title>09.综合理解 | GY&#39;s 1st Book</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" >
+<link rel="stylesheet" href="/book.min.4f0117e74e5337280f18eb9641eae520cb4b25adcf5dd64fafad4664145a5957.css" integrity="sha256-TwEX505TNygPGOuWQerlIMtLJa3PXdZPr61GZBRaWVc=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.3133b0fbeb7f2afce8cdf245a6b7887cc934119755fc2381f704651f3bdd1b0d.js" integrity="sha256-MTOw&#43;&#43;t/KvzozfJFpreIfMk0EZdV/COB9wRlHzvdGw0=" crossorigin="anonymous"></script>
+
+  <script defer src="/sw.min.88f1afdaf4798d7d3520420dcfe201f928c3d371fdedfc3ae28cd9b6b79544f8.js" integrity="sha256-iPGv2vR5jX01IEINz&#43;IB&#43;SjD03H97fw64ozZtreVRPg=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>GY&#39;s 1st Book</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <a href="/docs/example/" class="">五种阅读方法</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-32264a72a5f173e3bc6f4374f711e04a" class="toggle" checked />
+    <label for="section-32264a72a5f173e3bc6f4374f711e04a" class="flex justify-between">
+      <a role="button" class="">Ch5. 抽样阅读</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/Ch5.-%E6%8A%BD%E6%A0%B7%E9%98%85%E8%AF%BB/how-to-sample-reading-a-book/" class="">01.简单随机抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/Ch5.-%E6%8A%BD%E6%A0%B7%E9%98%85%E8%AF%BB/How-to-read-a-book-at-equal-intervals/" class="">02.等距抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/Ch5.-%E6%8A%BD%E6%A0%B7%E9%98%85%E8%AF%BB/%E6%95%B4%E7%BE%A4%E6%8A%BD%E6%A0%B7/" class="">03.整群抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/Ch5.-%E6%8A%BD%E6%A0%B7%E9%98%85%E8%AF%BB/%E5%88%86%E5%B1%82%E6%8A%BD%E6%A0%B7/" class="">04.分层抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/Ch5.-%E6%8A%BD%E6%A0%B7%E9%98%85%E8%AF%BB/%E4%BE%BF%E5%88%A9%E6%8A%BD%E6%A0%B7/" class="">05.便利抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/Ch5.-%E6%8A%BD%E6%A0%B7%E9%98%85%E8%AF%BB/%E4%B8%93%E5%AE%B6%E6%8A%BD%E6%A0%B7/" class="">06.专家抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/Ch5.-%E6%8A%BD%E6%A0%B7%E9%98%85%E8%AF%BB/%E9%9B%AA%E7%90%83%E6%8A%BD%E6%A0%B7/" class="">07.雪球抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/Ch5.-%E6%8A%BD%E6%A0%B7%E9%98%85%E8%AF%BB/%E9%85%8D%E9%A2%9D%E6%8A%BD%E6%A0%B7/" class="">08.配额抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/Ch5.-%E6%8A%BD%E6%A0%B7%E9%98%85%E8%AF%BB/%E7%BB%BC%E5%90%88%E7%90%86%E8%A7%A3/" class="active">09.综合理解</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-15fe20d7327ea2b86df51e6ba23aee8e" class="toggle"  />
+    <label for="section-15fe20d7327ea2b86df51e6ba23aee8e" class="flex justify-between">
+      <a role="button" class="">Ch8. 卡片阅读</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/Ch8.-%E5%8D%A1%E7%89%87%E9%98%85%E8%AF%BB/%E5%A6%82%E4%BD%95%E6%92%B0%E5%86%99%E5%9F%BA%E7%A1%80%E5%8D%A1/" class="">01.如何撰写基础卡</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/Ch8.-%E5%8D%A1%E7%89%87%E9%98%85%E8%AF%BB/%E5%A6%82%E4%BD%95%E6%92%B0%E5%86%99%E8%A1%8C%E5%8A%A8%E5%8D%A1/" class="">02.如何撰写行动卡</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/Ch8.-%E5%8D%A1%E7%89%87%E9%98%85%E8%AF%BB/%E5%A6%82%E4%BD%95%E6%92%B0%E5%86%99%E6%96%B0%E7%9F%A5%E5%8D%A1/" class="">03.如何撰写新知卡</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>09.综合理解</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1">1</a>
+          <ul>
+            <li></li>
+          </ul>
+        </li>
+        <li><a href="#2">2</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h2 id="1">
+  1
+  <a class="anchor" href="#1">#</a>
+</h2>
+<p>无论是概率抽样阅读还是非概率抽样阅读，我们的目的都是主动对阅读的书目做出假设：</p>
+<table>
+<thead>
+<tr>
+<th>抽样方法</th>
+<th>假设</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>简单随机抽样</td>
+<td>80/20法则、借助随机性可以消除章节选择偏差</td>
+</tr>
+<tr>
+<td>等距抽样</td>
+<td>80/20法则、借助章节之间的等距抽样可以消除章节选择偏差</td>
+</tr>
+<tr>
+<td>分层抽样</td>
+<td>书中的不同章节可以组成多个彼此独立的章群、借助随机性可以消除章节选择偏差</td>
+</tr>
+<tr>
+<td>整群抽样</td>
+<td>书中的不同章节可以组成多个彼此独立的章群、全部阅读其中一个章群可以减少书中内容的理解偏差</td>
+</tr>
+<tr>
+<td>便利抽样</td>
+<td>身边有可以帮助促进对阅读的书进行理解的情境</td>
+</tr>
+<tr>
+<td>专家抽样</td>
+<td>当自己没有足够判断力时可以借助专家意见对全书的重点进行理解</td>
+</tr>
+<tr>
+<td>雪球抽样</td>
+<td>书中的章节与章节之间是有关联的，利用这种关联可以逐步加深对书中内容的理解</td>
+</tr>
+<tr>
+<td>配额抽样</td>
+<td>借助自己的判断叠加非随机方式（便利/专家/雪球）可以帮助深入理解书中的内容</td>
+</tr>
+</tbody>
+</table>
+<p>所以，通过在阅读之前就预设「假设」，能够帮助我们更快启动阅读行为去验证种种假设。在以上抽样方法中，简单随机抽样阅读、等距抽样阅读、整群抽样阅读、分层抽样阅读都强调章节选择的随机性。概率抽样阅读旨在以客观角度引入随机化选择消除人为偏见，所以它体现了书本所有章节都有被选择到的公平机会。简单来说，非概率抽样的主要决定因素是「工具」。</p>
+<h4 id="概率抽样阅读简化图示如下">
+  概率抽样阅读简化图示如下：
+  <a class="anchor" href="#%e6%a6%82%e7%8e%87%e6%8a%bd%e6%a0%b7%e9%98%85%e8%af%bb%e7%ae%80%e5%8c%96%e5%9b%be%e7%a4%ba%e5%a6%82%e4%b8%8b">#</a>
+</h4>
+<p>
+  <img src="https://pbox.online/202312231743322.png" alt="image-20231220164024819" /></p>
+<h4 id="选择概率抽样阅读的前提">
+  选择概率抽样阅读的前提
+  <a class="anchor" href="#%e9%80%89%e6%8b%a9%e6%a6%82%e7%8e%87%e6%8a%bd%e6%a0%b7%e9%98%85%e8%af%bb%e7%9a%84%e5%89%8d%e6%8f%90">#</a>
+</h4>
+<ol>
+<li>阅读者希望最大程度减少对全书的抽样偏差，规避人为抽样的样章导致对全书代表性过高或代表性不足的风险。</li>
+<li>当一本书包含的主题、叙事、人物、情节等非常多样化时，使用概率抽样能够最大幅度增加代表全书的样本章节。</li>
+</ol>
+<p>而诸如便利抽样阅读、专家抽样阅读、雪球抽样阅读和配额抽样阅读，都属于非概率的抽样方法，它们不考虑全书章节都被平均选中的可能性，反而更依赖阅读者本人的主观意愿来选择样本。比如阅读者在阅读之前已经设定的相对明确的阅读目标、阅读者已有的知识和经验、阅读者的主观判断、阅读者当前拥有的时空情境、人际、情绪等阅读条件的便利性等。简单来说，非概率抽样的主要决定因素是「人」。</p>
+<h4 id="非概率抽样阅读简化图示如下">
+  非概率抽样阅读简化图示如下：
+  <a class="anchor" href="#%e9%9d%9e%e6%a6%82%e7%8e%87%e6%8a%bd%e6%a0%b7%e9%98%85%e8%af%bb%e7%ae%80%e5%8c%96%e5%9b%be%e7%a4%ba%e5%a6%82%e4%b8%8b">#</a>
+</h4>
+<p>
+  <img src="https://pbox.online/202312231743762.png" alt="image-20231220164325759" /></p>
+<h2 id="2">
+  2
+  <a class="anchor" href="#2">#</a>
+</h2>
+<p>因为非概率章节抽样不考虑整本书的所有章节，所以在下述情形更可能采取非概率抽样方法：</p>
+<ol>
+<li>阅读者在阅读之前已经明确希望对某些章节进行阅读而不希望对全书展开理解。</li>
+<li>阅读者希望对书中某一个章节做一些试探性的阅读，看看能不能激活自己的阅读兴趣。</li>
+<li>阅读者当前所拥有的抽样条件相当有限，不希望自己花太多时间精力就能快速找到章节。</li>
+</ol>
+<p>概率抽样阅读与非概率抽样阅读的整体区别如下：</p>
+<table>
+<thead>
+<tr>
+<th>要点</th>
+<th>概率抽样阅读</th>
+<th>非概率抽样阅读</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>抽取的样章对全书代表的程度</td>
+<td>↓</td>
+<td>↑</td>
+</tr>
+<tr>
+<td>抽样过程中对阅读者已有知识或经验的依赖程度</td>
+<td>↓</td>
+<td>↑</td>
+</tr>
+<tr>
+<td>抽样过程中对计算机（随机生成数据）的依赖程度</td>
+<td>↑</td>
+<td>↓</td>
+</tr>
+<tr>
+<td>抽样过程中对阅读者当前拥有的时空/人际/情绪等情境的依赖程度</td>
+<td>↓</td>
+<td>↑</td>
+</tr>
+<tr>
+<td>整体抽样的时间心力成本消耗程度</td>
+<td>↑</td>
+<td>↓</td>
+</tr>
+</tbody>
+</table>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1">1</a>
+          <ul>
+            <li></li>
+          </ul>
+        </li>
+        <li><a href="#2">2</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
